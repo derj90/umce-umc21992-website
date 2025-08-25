@@ -925,8 +925,8 @@ body {
 }
 
 .testimonials-section .section-title {
-    color: #f8fafc;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: 700;
 }
 
