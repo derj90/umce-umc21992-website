@@ -634,69 +634,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeImpactAnimations();
     initializeAllMetricEffects();
     
-    // Interactive Challenges Section
-    function initializeChallenges() {
-        const challengeTabs = document.querySelectorAll('.challenge-tab');
-        const challengePanels = document.querySelectorAll('.challenge-panel');
-        
-        challengeTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const targetChallenge = this.getAttribute('data-challenge');
-                
-                // Remove active from all tabs and panels
-                challengeTabs.forEach(t => t.classList.remove('active'));
-                challengePanels.forEach(p => p.classList.remove('active'));
-                
-                // Add active to clicked tab and corresponding panel
-                this.classList.add('active');
-                document.getElementById(`challenge-${targetChallenge}`).classList.add('active');
-            });
-        });
-        
-        // Animate challenge cards on scroll
-        const challengeCards = document.querySelectorAll('.challenge-card, .task-card');
-        challengeCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        });
-        
-        // Observer for challenges section
-        const challengesObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const cards = entry.target.querySelectorAll('.challenge-card, .task-card');
-                    cards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, index * 100);
-                    });
-                    challengesObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        const challengesSection = document.querySelector('.challenges-section');
-        if (challengesSection) {
-            challengesObserver.observe(challengesSection);
-        }
-        
-        // Add hover effects for challenge and task cards
-        challengeCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-                this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.15)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
-            });
-        });
-    }
-    
-    initializeChallenges();
     
     
     console.log('🎓 UMCE UMC21992 site loaded successfully!');
