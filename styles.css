@@ -928,6 +928,10 @@ body {
     color: #ffffff !important;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: 700;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-clip: unset !important;
 }
 
 .testimonials-section .section-subtitle {
