@@ -1,0 +1,27 @@
+{
+  "name": "UMCE Virtual - Proyecto UMC21992",
+  "short_name": "UMCE Virtual",
+  "description": "Sitio de presentación del Proyecto UMC21992: Fortalecimiento de la docencia a través del uso e integración de TIC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#007AFF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "technology"],
+  "lang": "es",
+  "scope": "/"
+}
